@@ -1,0 +1,30 @@
+{
+  "name": "cardengine",
+  "version": "1.0.0",
+  "description": "A server for multiplayer card games over the internet",
+  "main": "cardengine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jamjarman/CardEngine.git"
+  },
+  "keywords": [
+    "Cards",
+    "Server",
+    "CardEngine"
+  ],
+  "author": "Jamie Gilkeson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jamjarman/CardEngine/issues"
+  },
+  "homepage": "https://github.com/Jamjarman/CardEngine#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.10.2"
+  }
+}

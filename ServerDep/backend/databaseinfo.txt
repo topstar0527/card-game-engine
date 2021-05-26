@@ -1,0 +1,28 @@
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| id            | int(11)     | NO   | PRI | NULL    |       |
+| players       | mediumtext  | YES  |     | NULL    |       |
+| cycle         | int(11)     | YES  |     | NULL    |       |
+| deck          | mediumtext  | YES  |     | NULL    |       |
+| played_cards  | mediumtext  | YES  |     | NULL    |       |
+| game          | tinytext    | YES  |     | NULL    |       |
+| game_name     | varchar(45) | YES  |     | NULL    |       |
+| game_password | varchar(45) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+
+id - randomly generated game id
+players - json map, key of player name. Each entry holds an array of format [hand[], score, bid]
+game - game type name (e.g. hearts, blukes, etc.)
+cycle - current part of sequence
+played_cards - json array of cards currently in play
+deck - json array of current cards in deck
+game_name - the name to be displayed for the game
+game_password - optional password to be used for entry to the game
+
+cycle
+(0 - (n-1)) - players' turns
+n - end of turn
+(n + 1) - end of hand
+(n + 2) - dealing
+((n + 3) - (2n + 2)) - bidding
